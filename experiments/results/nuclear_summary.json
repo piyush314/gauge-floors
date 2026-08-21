@@ -1,0 +1,525 @@
+{
+  "base_seed": 20260723,
+  "bit_widths": [
+    4,
+    8
+  ],
+  "dimension_scaling": {
+    "dimensions": [
+      16,
+      32,
+      64,
+      128,
+      256,
+      1024
+    ],
+    "generator": "independent Gaussian-QR Stiefel frames U and V; singular values geomspace(1,0.15,K); balanced factors U sqrt(Sigma) and sqrt(Sigma) V^T",
+    "rows": {
+      "1024": {
+        "dimensions": {
+          "K": 1024,
+          "m": 1536,
+          "n": 1280
+        },
+        "methods": {
+          "balanced_haar": {
+            "count": 8,
+            "median": 11.933472081930248,
+            "q25": 11.915195733304818,
+            "q75": 12.00832648683982
+          },
+          "balanced_randomized_hadamard": {
+            "count": 8,
+            "median": 11.964325413205238,
+            "q25": 11.935868938466724,
+            "q75": 11.972796784110356
+          },
+          "full_gauge_svd_hadamard": {
+            "count": 8,
+            "median": 0.9999999999999997,
+            "q25": 0.9999999999999997,
+            "q75": 0.9999999999999997
+          }
+        }
+      },
+      "128": {
+        "dimensions": {
+          "K": 128,
+          "m": 192,
+          "n": 160
+        },
+        "methods": {
+          "balanced_haar": {
+            "count": 8,
+            "median": 8.20199262043162,
+            "q25": 8.141609371682751,
+            "q75": 8.271984248502218
+          },
+          "balanced_randomized_hadamard": {
+            "count": 8,
+            "median": 7.991298480917239,
+            "q25": 7.869476757346199,
+            "q75": 8.100059427836609
+          },
+          "full_gauge_svd_hadamard": {
+            "count": 8,
+            "median": 0.9999999999999992,
+            "q25": 0.9999999999999992,
+            "q75": 0.9999999999999992
+          }
+        }
+      },
+      "16": {
+        "dimensions": {
+          "K": 16,
+          "m": 24,
+          "n": 20
+        },
+        "methods": {
+          "balanced_haar": {
+            "count": 8,
+            "median": 4.480073673808431,
+            "q25": 4.402518652917809,
+            "q75": 4.527294305124053
+          },
+          "balanced_randomized_hadamard": {
+            "count": 8,
+            "median": 4.310909690994139,
+            "q25": 4.2227885953003845,
+            "q75": 4.444623097965636
+          },
+          "full_gauge_svd_hadamard": {
+            "count": 8,
+            "median": 1.0000000000000002,
+            "q25": 1.0000000000000002,
+            "q75": 1.0000000000000002
+          }
+        }
+      },
+      "256": {
+        "dimensions": {
+          "K": 256,
+          "m": 384,
+          "n": 320
+        },
+        "methods": {
+          "balanced_haar": {
+            "count": 8,
+            "median": 9.437222899572959,
+            "q25": 9.401621074323486,
+            "q75": 9.464618743718603
+          },
+          "balanced_randomized_hadamard": {
+            "count": 8,
+            "median": 9.295086033453021,
+            "q25": 9.273007971890722,
+            "q75": 9.31290050214536
+          },
+          "full_gauge_svd_hadamard": {
+            "count": 8,
+            "median": 1.0000000000000002,
+            "q25": 1.0000000000000002,
+            "q75": 1.0000000000000002
+          }
+        }
+      },
+      "32": {
+        "dimensions": {
+          "K": 32,
+          "m": 48,
+          "n": 40
+        },
+        "methods": {
+          "balanced_haar": {
+            "count": 8,
+            "median": 5.644387052139671,
+            "q25": 5.551052814727875,
+            "q75": 5.697980074892625
+          },
+          "balanced_randomized_hadamard": {
+            "count": 8,
+            "median": 5.61087981443923,
+            "q25": 5.485831381534801,
+            "q75": 5.65490693295641
+          },
+          "full_gauge_svd_hadamard": {
+            "count": 8,
+            "median": 0.9999999999999993,
+            "q25": 0.9999999999999993,
+            "q75": 0.9999999999999993
+          }
+        }
+      },
+      "64": {
+        "dimensions": {
+          "K": 64,
+          "m": 96,
+          "n": 80
+        },
+        "methods": {
+          "balanced_haar": {
+            "count": 8,
+            "median": 6.927999932762029,
+            "q25": 6.763708417010797,
+            "q75": 7.0108006765372135
+          },
+          "balanced_randomized_hadamard": {
+            "count": 8,
+            "median": 6.882021098141392,
+            "q25": 6.743240067932225,
+            "q75": 6.931954202100034
+          },
+          "full_gauge_svd_hadamard": {
+            "count": 8,
+            "median": 0.9999999999999999,
+            "q25": 0.9999999999999999,
+            "q75": 0.9999999999999999
+          }
+        }
+      }
+    },
+    "shape_rule": "m=3K/2, n=5K/4",
+    "trials_per_dimension": 8
+  },
+  "dimensions": {
+    "K": 64,
+    "m": 64,
+    "n": 64
+  },
+  "equal_bit_ratio_invariance": {
+    "explanation": "When b_A=b_B, the common bit-dependent constant multiplies both numerator and floor and cancels from their ratio.",
+    "maximum_absolute_4bit_8bit_ratio_difference": 2.9103830456733704e-11,
+    "maximum_relative_4bit_8bit_ratio_difference": 4.440892098500625e-16
+  },
+  "estimand": "leading range objective divided by (c_A+c_B)||AB||_*^2/K; equal bit widths",
+  "families": {
+    "dense_diagonal": {
+      "balanced_deterministic": {
+        "bootstrap_95_high": 6.3691915159652375,
+        "bootstrap_95_low": 6.267046649673356,
+        "count": 50,
+        "median": 6.307329129541216,
+        "q25": 6.241034999007704,
+        "q75": 6.424081748782562
+      },
+      "balanced_haar": {
+        "bootstrap_95_high": 6.945371246353815,
+        "bootstrap_95_low": 6.779008325071084,
+        "count": 50,
+        "median": 6.835327191508003,
+        "q25": 6.716137472723086,
+        "q75": 6.970638737351894
+      },
+      "diagonal_hadamard": {
+        "bootstrap_95_high": 6.949830373386548,
+        "bootstrap_95_low": 6.865059222345694,
+        "count": 50,
+        "median": 6.914813105925322,
+        "q25": 6.785039983812521,
+        "q75": 6.988546300873244
+      },
+      "full_gauge_svd_hadamard": {
+        "bootstrap_95_high": 1.0000000000000002,
+        "bootstrap_95_low": 1.0,
+        "count": 50,
+        "median": 1.0,
+        "q25": 1.0,
+        "q75": 1.0000000000000002
+      },
+      "identity": {
+        "bootstrap_95_high": 17720.28997565376,
+        "bootstrap_95_low": 9139.326926174403,
+        "count": 50,
+        "median": 11406.832393840534,
+        "q25": 6357.63190257799,
+        "q75": 25156.013806122646
+      }
+    },
+    "general_gauge": {
+      "balanced_deterministic": {
+        "bootstrap_95_high": 6.421130170077708,
+        "bootstrap_95_low": 6.341800130693455,
+        "count": 50,
+        "median": 6.389427646784119,
+        "q25": 6.278730817196005,
+        "q75": 6.444520901423889
+      },
+      "balanced_haar": {
+        "bootstrap_95_high": 6.974652237123921,
+        "bootstrap_95_low": 6.83887569897264,
+        "count": 50,
+        "median": 6.911424975294718,
+        "q25": 6.800329173654738,
+        "q75": 7.018613695278571
+      },
+      "diagonal_hadamard": {
+        "bootstrap_95_high": 336.3440607347779,
+        "bootstrap_95_low": 327.5804512110949,
+        "count": 50,
+        "median": 331.8070007500263,
+        "q25": 324.80063940703866,
+        "q75": 340.2662749424908
+      },
+      "full_gauge_svd_hadamard": {
+        "bootstrap_95_high": 1.0000000000000002,
+        "bootstrap_95_low": 1.0,
+        "count": 50,
+        "median": 1.0,
+        "q25": 1.0,
+        "q75": 1.0000000000000002
+      },
+      "identity": {
+        "bootstrap_95_high": 360.44920143615855,
+        "bootstrap_95_low": 350.0443360058997,
+        "count": 50,
+        "median": 355.6431006054013,
+        "q25": 343.70031038176,
+        "q75": 363.07600145850546
+      }
+    },
+    "spiky": {
+      "balanced_deterministic": {
+        "bootstrap_95_high": 1.0000000000000002,
+        "bootstrap_95_low": 1.0,
+        "count": 50,
+        "median": 1.0000000000000002,
+        "q25": 1.0,
+        "q75": 1.0000000000000002
+      },
+      "balanced_haar": {
+        "bootstrap_95_high": 6.934257165382284,
+        "bootstrap_95_low": 6.77252522923247,
+        "count": 50,
+        "median": 6.849286851435102,
+        "q25": 6.745645221508772,
+        "q75": 7.070723206991096
+      },
+      "diagonal_hadamard": {
+        "bootstrap_95_high": 1.0000000000000002,
+        "bootstrap_95_low": 1.0,
+        "count": 50,
+        "median": 1.0000000000000002,
+        "q25": 1.0,
+        "q75": 1.0000000000000002
+      },
+      "full_gauge_svd_hadamard": {
+        "bootstrap_95_high": 1.0000000000000002,
+        "bootstrap_95_low": 1.0000000000000002,
+        "count": 50,
+        "median": 1.0000000000000002,
+        "q25": 1.0000000000000002,
+        "q75": 1.0000000000000002
+      },
+      "identity": {
+        "bootstrap_95_high": 62252.0675779841,
+        "bootstrap_95_low": 33534.90242901129,
+        "count": 50,
+        "median": 45378.947869555865,
+        "q25": 28187.170544084263,
+        "q75": 74495.14561432376
+      }
+    }
+  },
+  "family_generators": {
+    "common": "K=64; singular values geomspace(1,0.15,K); all Gaussian-QR orthogonal draws use independent stable streams; every gauge is invertible, so all products have rank K",
+    "dense_diagonal": "A0=U sqrt(Sigma) R^T, B0=R sqrt(Sigma) V^T for independent Haar U,V,R; gauge diag(exp(z)) with iid z~N(0,1.35^2)",
+    "general_gauge": "same Haar-oriented A0,B0; gauge Q diag(exp(linspace(-2,2,K))) Q^T for independent Haar Q",
+    "spiky": "A0=B0=diag(sqrt(sigma)); 64 iid N(0,1.35^2) log-scales; eight uniformly selected coordinates shifted independently by +/-2.25; mean-center, clip to [-log(25),log(25)], exponentiate"
+  },
+  "flattening": {
+    "deterministic_hadamard": {
+      "count": 1,
+      "finite_set_coherence": {
+        "median": 10.1161487517785,
+        "q25": 10.1161487517785,
+        "q75": 10.1161487517785
+      },
+      "objective_floor_ratio": {
+        "median": 6.043915462079896,
+        "q25": 6.043915462079896,
+        "q75": 6.043915462079896
+      }
+    },
+    "full_gauge_svd_hadamard": {
+      "count": 1,
+      "finite_set_coherence": {
+        "median": 1.0000000000000002,
+        "q25": 1.0000000000000002,
+        "q75": 1.0000000000000002
+      },
+      "objective_floor_ratio": {
+        "median": 1.0000000000000004,
+        "q25": 1.0000000000000004,
+        "q75": 1.0000000000000004
+      }
+    },
+    "haar": {
+      "count": 100,
+      "finite_set_coherence": {
+        "median": 13.958107835553609,
+        "q25": 12.63269665289419,
+        "q75": 15.223890982244157
+      },
+      "objective_floor_ratio": {
+        "median": 6.975169609544751,
+        "q25": 6.781940616341592,
+        "q75": 7.067802441064313
+      }
+    },
+    "randomized_hadamard": {
+      "count": 100,
+      "finite_set_coherence": {
+        "median": 13.641395252232314,
+        "q25": 13.004245455058626,
+        "q75": 14.864957313976848
+      },
+      "objective_floor_ratio": {
+        "median": 6.942592067048054,
+        "q25": 6.813004956597725,
+        "q75": 7.032845601341454
+      }
+    }
+  },
+  "noise_constants": {
+    "4": 0.0017006802721088435,
+    "8": 5.166677000020666e-06
+  },
+  "same_output": {
+    "balanced_deterministic": {
+      "median": 6.352205577213928,
+      "q25": 6.301801611332129,
+      "q75": 6.40471713251887
+    },
+    "diagnostics": {
+      "maximum_relative_floor_spread": 9.441897468471662e-16
+    },
+    "identity": {
+      "median": 163.77213149441835,
+      "q25": 6.894705479845058,
+      "q75": 829.2162446462979
+    }
+  },
+  "singular_sweep": {
+    "product_rank": 16,
+    "rank_A": 32,
+    "rank_B": 32,
+    "rows": [
+      {
+        "condition_T": 2.770700018871855,
+        "energy_product": 111.0456564508078,
+        "epsilon": 0.1,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.914820712416015e-16,
+        "relative_excess": 1.0487943124960881,
+        "relative_product_residual": 3.6549470737297746e-16
+      },
+      {
+        "condition_T": 8.191324533343195,
+        "energy_product": 71.39921980862529,
+        "epsilon": 0.01,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.758186851173352e-16,
+        "relative_excess": 0.31731685989331093,
+        "relative_product_residual": 3.572155560167041e-16
+      },
+      {
+        "condition_T": 25.713886264135603,
+        "energy_product": 59.438000860184275,
+        "epsilon": 0.001,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.660521672888552e-16,
+        "relative_excess": 0.09663216014602849,
+        "relative_product_residual": 3.5205329552690743e-16
+      },
+      {
+        "condition_T": 81.254251169932,
+        "energy_product": 55.83306004950783,
+        "epsilon": 0.0001,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.894248396015319e-16,
+        "relative_excess": 0.030120938853273493,
+        "relative_product_residual": 3.6440732230898653e-16
+      },
+      {
+        "condition_T": 256.9294571804709,
+        "energy_product": 54.71428673005581,
+        "epsilon": 1e-05,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 7.007415412936169e-16,
+        "relative_excess": 0.009479551453478452,
+        "relative_product_residual": 3.7038895906487386e-16
+      },
+      {
+        "condition_T": 812.4762594244359,
+        "energy_product": 54.36271730574561,
+        "epsilon": 1e-06,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 7.007703369700657e-16,
+        "relative_excess": 0.0029930893981764406,
+        "relative_product_residual": 3.704041795134943e-16
+      },
+      {
+        "condition_T": 2569.2736191586655,
+        "energy_product": 54.25176597808964,
+        "epsilon": 1e-07,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.762597376276662e-16,
+        "relative_excess": 0.0009460354536023896,
+        "relative_product_residual": 3.574486818848992e-16
+      },
+      {
+        "condition_T": 8124.756011135092,
+        "energy_product": 54.216702646562325,
+        "epsilon": 1e-08,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.927546327419891e-16,
+        "relative_excess": 0.0002991163708903066,
+        "relative_product_residual": 3.661673415778863e-16
+      },
+      {
+        "condition_T": 25692.734393350238,
+        "energy_product": 54.20561690632274,
+        "epsilon": 1e-09,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.876510222189142e-16,
+        "relative_excess": 9.458426870279091e-05,
+        "relative_product_residual": 3.634697407112036e-16
+      },
+      {
+        "condition_T": 81247.56742085367,
+        "energy_product": 54.20211151332348,
+        "epsilon": 1e-10,
+        "experiment": "singular_sweep",
+        "nuclear_squared": 54.200490392575624,
+        "product_residual": 6.953378095160287e-16,
+        "relative_excess": 2.9909706279696024e-05,
+        "relative_product_residual": 3.675327239621685e-16
+      }
+    ]
+  },
+  "spiky_generator": {
+    "fixed_output": "diag(geomspace(1, 0.15, 64))",
+    "gauge": "64 iid N(0,1.35^2) log-scales, eight uniformly selected coordinates shifted independently by +/-2.25, log-scales mean-normalized then clipped to [-log(25),log(25)]",
+    "independent_trials": 50
+  },
+  "trials_per_family": 50,
+  "validation": {
+    "maximum_deterministic_coherence_to_bound_ratio": 0.5876543780110618,
+    "maximum_full_gauge_floor_ratio_deviation": 8.881784197001252e-16,
+    "maximum_relative_4bit_8bit_ratio_difference": 4.440892098500625e-16,
+    "maximum_relative_product_residual": 3.035343973763569e-15,
+    "maximum_relative_uncertainty_identity_residual": 4.440892098500625e-16,
+    "maximum_same_output_relative_floor_spread": 9.441897468471662e-16,
+    "minimum_objective_floor_ratio": 0.9999999999999996,
+    "validation_tolerance": 5e-10
+  }
+}

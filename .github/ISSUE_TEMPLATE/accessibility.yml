@@ -1,0 +1,30 @@
+name: Accessibility barrier
+description: Request an alternative format or report an access problem.
+title: "[accessibility] "
+labels: [accessibility]
+body:
+  - type: input
+    id: resource
+    attributes:
+      label: Resource
+      description: File, page, figure, table, command, or URL that caused the barrier.
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: What were you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: barrier
+    attributes:
+      label: Barrier and preferred alternative
+      description: Describe the problem and any format that would work better.
+    validations:
+      required: true
+  - type: textarea
+    id: technology
+    attributes:
+      label: Assistive technology or environment (optional)
+      description: Include only details you are comfortable sharing publicly.

@@ -1,0 +1,40 @@
+---
+title: "Tutorial 1: balance a factorization"
+description: "A two-coordinate example separates the factorization-energy and coordinate-range gaps."
+---
+
+## Problem
+
+Two diagonal factors are badly scaled but multiply to the identity. We will
+apply an inner transform that preserves the product while balancing their Gram
+matrices.
+
+```python
+import numpy as np
+
+from experiments.nuclear import balance_transform, leading_metrics, transformed_factors
+
+A = np.diag([4.0, 0.25])
+B = np.diag([0.25, 4.0])
+T = balance_transform(A, B)
+X, Y = transformed_factors(A, B, T=T)
+
+for name, left, right in (("original", A, B), ("balanced", X, Y)):
+    metrics = leading_metrics(left, right)
+    print(name, round(metrics["objective_floor_ratio"], 6),
+          round(metrics["energy_nuclear_ratio"], 6))
+
+assert np.allclose(X @ Y, A @ B)
+```
+
+Expected pairs are `original 129.001953 64.500977` and
+`balanced 2.0 1.0`.
+
+## Interpretation
+
+Balancing closes the factorization-energy gap exactly here. The remaining
+factor of two is a coordinate-range effect: an energy optimum does not by
+itself flatten every coordinate. The larger experiments compare Haar and
+Hadamard flattening after balancing.
+
+[Open the executable notebook](https://github.com/piyush314/gauge-floors/blob/main/notebooks/tutorials/01_gauge_balancing.ipynb).

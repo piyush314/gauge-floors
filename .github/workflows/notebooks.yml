@@ -1,0 +1,59 @@
+name: notebooks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "notebooks/**"
+      - "experiments/**"
+      - "scripts/check_public_scope.py"
+      - "scripts/execute_notebooks.py"
+      - "Makefile"
+      - ".github/workflows/notebooks.yml"
+  pull_request:
+    paths:
+      - "notebooks/**"
+      - "experiments/**"
+      - "scripts/check_public_scope.py"
+      - "scripts/execute_notebooks.py"
+      - "Makefile"
+      - ".github/workflows/notebooks.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13.7"
+          cache: pip
+          cache-dependency-path: |
+            experiments/requirements-lock.txt
+            notebooks/requirements.txt
+      - name: Enforce public repository scope
+        run: make scope-check PYTHON=python
+      - name: Install pinned notebook environment
+        run: >-
+          python -m pip install
+          -r experiments/requirements-lock.txt
+          -r notebooks/requirements.txt
+      - name: Execute tutorial and reproduction notebooks from clean kernels
+        run: >-
+          python scripts/execute_notebooks.py
+          --python python
+          --output-dir "$RUNNER_TEMP/executed-notebooks"
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: executed-notebooks
+          path: ${{ runner.temp }}/executed-notebooks/**/*.ipynb
+          if-no-files-found: warn
+          retention-days: 7

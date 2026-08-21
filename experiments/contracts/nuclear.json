@@ -1,0 +1,28 @@
+{
+  "command": "python -m experiments.reproduce nuclear",
+  "data": {
+    "external_downloads": false,
+    "inputs": "seeded synthetic matrices"
+  },
+  "determinism": {
+    "base_seed": 20260723,
+    "scientific_fields": "deterministic under experiments/requirements-lock.txt",
+    "timings": "machine dependent"
+  },
+  "family": "nuclear-floor",
+  "outputs": [
+    "experiments/results/nuclear_*.csv",
+    "experiments/results/nuclear_summary.json",
+    "experiments/results/nuclear_manifest.json",
+    "figures/nuclear/*.svg"
+  ],
+  "reference_runtime_seconds": {
+    "maximum": 150,
+    "minimum": 60
+  },
+  "success": [
+    "all validation residuals remain within encoded tolerances",
+    "the family manifest verifies every output hash",
+    "all four SVG charts are generated"
+  ]
+}

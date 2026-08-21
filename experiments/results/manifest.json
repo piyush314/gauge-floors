@@ -1,0 +1,46 @@
+{
+  "artifact_sha256": {
+    "experiments/results/discrepancy_affine.csv": "b0751f8a4b2aeb1be9d268e5b9e5b6a7bb722dbed60d31cd59ba4ae601e3badb",
+    "experiments/results/discrepancy_dynamic.csv": "64983f93e51acd824569855dc6f158b24f9cdbc00edca690c90d32f86cd6e110",
+    "experiments/results/discrepancy_manifest.json": "4e652686fa59a653c8c26176cfed6fece8db78b606510eb5ec639417d8c3a97b",
+    "experiments/results/discrepancy_runtime.csv": "cc0d5087935a4520e509da7625253669b17ea410f585894c0b4ed61104f1f648",
+    "experiments/results/discrepancy_static.csv": "352cfef305713cbca3d411053e646bd9e182859f5a7e2346af7805049a43fa24",
+    "experiments/results/discrepancy_summary.json": "221bf5c7b37b0a9dcc4c1fc4fff48b7be9e125aad26fb81c0d1393160c733663",
+    "experiments/results/nuclear_dimension_scaling.csv": "0a124c2973c8538aba4fcd4c2a147d96b96e2d0dce9579e4f93af668a8d1b16c",
+    "experiments/results/nuclear_flattening.csv": "6232ec05ab774eaff7d754da650ac46c1f463a64dcd38c9315a46ae90d20a7e0",
+    "experiments/results/nuclear_manifest.json": "850679a10ac828a5c005c9652baed5a20d6e00c75e365169018970131e25e461",
+    "experiments/results/nuclear_singular.csv": "5875c2578048f9aaf5620a7357b851615adfa285c191419082e66a16cfd17205",
+    "experiments/results/nuclear_summary.json": "9b1c47e63cf28899c4cf433f889a8d8639506906ea331c0c328d3a4c157006be",
+    "experiments/results/nuclear_trials.csv": "00eea259b3e94a90fc313a4dae1cd13f07eab6b125a37f69fd4c737077cebe81",
+    "figures/discrepancy/affine_saturation.svg": "ee805441c64c12ef89135d437f934706326ffcbf205b57a0642c68862f4e43d7",
+    "figures/discrepancy/dynamic_scaling.svg": "34a1858ae4180baf0aa3300cd195062231f52ac574af4be1b6769a11c9e69e8e",
+    "figures/discrepancy/sensitivity_imbalance.svg": "8a85e47c8ddcfad69729335e1280bfe07c511511761d6e513ecf3253841ff83b",
+    "figures/discrepancy/static_transfer.svg": "08ab412aa68cf6ad07ccfdc8529f72f8ed4fbd383e3c4c77de7507ca5f491b5f",
+    "figures/nuclear/dimension_scaling.svg": "54a32dd4b04c1f06c62d1ddf81c9e7670e39692ec7b62294ed965ae2b62fdecd",
+    "figures/nuclear/flattening_comparison.svg": "8deb731ac2d9e0e028a05bd0fdd058cf1deac978e700638756ea1db1f95966e1",
+    "figures/nuclear/objective_ratios.svg": "843dfbd956fe05bd3a56f8f8b07f922bd5647765963fccac8a0aa9f346c1e7b0",
+    "figures/nuclear/singular_frontier.svg": "a52f087c7442c81aa64a5f72268cfedddaf4f57bcbb7c476f8f0ebbf4614a681"
+  },
+  "base_seed": 20260723,
+  "command": "python -m experiments.reproduce all",
+  "dataset_sha256": {
+    "sklearn_digits_data_and_targets": "f6d9e39f37dc45d327f6db33428ee58970ccceabb2535a5c179de35886b70443"
+  },
+  "elapsed_seconds": 207.52645974996267,
+  "implementation": "CPython",
+  "packages": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0"
+  },
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "python": "3.13.7",
+  "selection": "all",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

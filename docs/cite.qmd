@@ -1,0 +1,15 @@
+---
+title: "Cite"
+---
+
+Use [`CITATION.cff`](https://github.com/piyush314/gauge-floors/blob/main/CITATION.cff)
+through GitHub's **Cite this repository** control. Cite the companion study whose
+method, result, or artifact you use.
+
+The nuclear-floor preprint is available from
+[HAL Open Science](https://hal.science/hal-05711980). Citation metadata for the
+product-aware rounding study is included in the CFF record and will be updated
+when its public identifier is available.
+
+Repository citation dates and versions describe the computational artifact,
+not the publication status of either study.

@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # The scientific lock and its committed artifacts move together after a full
+  # controlled reproduction, so routine version PRs are intentionally limited
+  # to the notebook runner and CI actions.
+  - package-ecosystem: pip
+    directory: /notebooks
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5

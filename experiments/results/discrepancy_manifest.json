@@ -1,0 +1,49 @@
+{
+  "artifact_sha256": {
+    "experiments/results/discrepancy_affine.csv": "b0751f8a4b2aeb1be9d268e5b9e5b6a7bb722dbed60d31cd59ba4ae601e3badb",
+    "experiments/results/discrepancy_dynamic.csv": "64983f93e51acd824569855dc6f158b24f9cdbc00edca690c90d32f86cd6e110",
+    "experiments/results/discrepancy_runtime.csv": "cc0d5087935a4520e509da7625253669b17ea410f585894c0b4ed61104f1f648",
+    "experiments/results/discrepancy_static.csv": "352cfef305713cbca3d411053e646bd9e182859f5a7e2346af7805049a43fa24",
+    "experiments/results/discrepancy_summary.json": "221bf5c7b37b0a9dcc4c1fc4fff48b7be9e125aad26fb81c0d1393160c733663",
+    "figures/discrepancy/affine_saturation.svg": "ee805441c64c12ef89135d437f934706326ffcbf205b57a0642c68862f4e43d7",
+    "figures/discrepancy/dynamic_scaling.svg": "34a1858ae4180baf0aa3300cd195062231f52ac574af4be1b6769a11c9e69e8e",
+    "figures/discrepancy/sensitivity_imbalance.svg": "8a85e47c8ddcfad69729335e1280bfe07c511511761d6e513ecf3253841ff83b",
+    "figures/discrepancy/static_transfer.svg": "08ab412aa68cf6ad07ccfdc8529f72f8ed4fbd383e3c4c77de7507ca5f491b5f"
+  },
+  "base_seed": 20260723,
+  "command": "python -m experiments.reproduce discrepancy",
+  "dataset_sha256": {
+    "sklearn_digits_data_and_targets": "f6d9e39f37dc45d327f6db33428ee58970ccceabb2535a5c179de35886b70443"
+  },
+  "implementation": "CPython",
+  "packages": {
+    "matplotlib": "3.10.8",
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.17.0"
+  },
+  "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O",
+  "protocol": {
+    "dynamic_blocks_per_configuration": 10,
+    "residues_per_block": 25,
+    "static_128_sample_subsets_per_split": 20,
+    "static_calibration_conditions": [
+      "n128",
+      "full"
+    ],
+    "static_methods": [
+      "rtn",
+      "centered",
+      "centered_bias",
+      "uncentered"
+    ],
+    "static_splits": 5
+  },
+  "python": "3.13.7",
+  "thread_environment": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

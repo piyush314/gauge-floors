@@ -1,0 +1,15 @@
+---
+title: "Tutorials"
+description: "Text-first lessons paired with executable notebooks."
+---
+
+The learning path uses examples small enough to inspect line by line. Each page
+has a paired output-free notebook that CI executes from a clean kernel.
+
+| Lesson | Web page | Notebook | Time |
+| --- | --- | --- | --- |
+| Balance a badly scaled factorization | [Gauge balancing](nuclear-floor.qmd) | [`01_gauge_balancing.ipynb`](https://github.com/piyush314/gauge-floors/blob/main/notebooks/tutorials/01_gauge_balancing.ipynb) | 5 minutes |
+| Cancel four rounding errors | [Coordinated rounding](coordinated-rounding.qmd) | [`02_coordinated_rounding.ipynb`](https://github.com/piyush314/gauge-floors/blob/main/notebooks/tutorials/02_coordinated_rounding.ipynb) | 5 minutes |
+
+For provenance rather than concepts, use the
+[reproduction notebooks](https://github.com/piyush314/gauge-floors/tree/main/notebooks/reproduction).

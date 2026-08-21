@@ -1,0 +1,43 @@
+---
+title: "Concept map"
+description: "How gauge balancing and coordinated rounding answer different quantization questions."
+---
+
+## One product, two control points
+
+Suppose two matrices are multiplied through an inner dimension and then stored
+on scalar grids. There are two distinct moments at which the computation can be
+changed.
+
+1. **Before quantization:** apply a product-preserving inner transformation to
+   redistribute energy and coordinate ranges while leaving the exact product
+   unchanged.
+2. **At rounding time:** keep the grid fixed but coordinate up/down decisions so
+   their product errors cancel in a low-dimensional output image.
+
+The first experiment family studies limits under independent scalar noise. The
+second studies deterministic coordination after the fractional residues and an
+output block are known.
+
+## Three quantities that must not be conflated
+
+| Quantity | Question |
+| --- | --- |
+| Factorization energy | How much squared factor energy is needed to represent a fixed product? |
+| Coordinate range | How much larger is the scalar grid step than an average-energy scale? |
+| Product discrepancy | How much can signed rounding errors cancel after multiplication? |
+
+Balancing can close an energy gap without making every coordinate equally
+small. Flattening addresses that second range gap. Coordinated rounding is a
+different mechanism: it exploits the rank and row sensitivities of the current
+output block.
+
+## Evidence types
+
+Exact identities, deterministic certificates, seeded numerical studies, and
+wall-clock measurements are labeled separately. A failed sufficient
+certificate means that benefit is not certified; it is not evidence that a
+particular unmodeled mechanism caused the failure.
+
+Continue with [gauge balancing](tutorials/nuclear-floor.qmd) or
+[coordinated rounding](tutorials/coordinated-rounding.qmd).

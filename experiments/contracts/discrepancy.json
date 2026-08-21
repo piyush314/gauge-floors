@@ -1,0 +1,29 @@
+{
+  "command": "python -m experiments.reproduce discrepancy",
+  "data": {
+    "external_downloads": false,
+    "inputs": "seeded synthetic blocks and scikit-learn's bundled Digits dataset"
+  },
+  "determinism": {
+    "base_seed": 20260723,
+    "scientific_fields": "deterministic under experiments/requirements-lock.txt",
+    "timings": "machine dependent"
+  },
+  "family": "product-aware-rounding",
+  "outputs": [
+    "experiments/results/discrepancy_*.csv",
+    "experiments/results/discrepancy_summary.json",
+    "experiments/results/discrepancy_manifest.json",
+    "figures/discrepancy/*.svg"
+  ],
+  "reference_runtime_seconds": {
+    "maximum": 180,
+    "minimum": 90
+  },
+  "success": [
+    "walk and conditional-expectation invariants remain within encoded tolerances",
+    "static analytic and direct errors agree within encoded tolerances",
+    "the family manifest verifies every output hash",
+    "all four SVG charts are generated"
+  ]
+}

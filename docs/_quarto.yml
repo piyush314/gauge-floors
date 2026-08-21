@@ -1,0 +1,68 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - concepts.qmd
+    - getting-started.md
+    - tutorials/index.qmd
+    - tutorials/nuclear-floor.qmd
+    - tutorials/coordinated-rounding.qmd
+    - reproduction.md
+    - figures.qmd
+    - figure-descriptions.md
+    - data-dictionary.md
+    - accessibility.md
+    - faq.qmd
+    - cite.qmd
+
+website:
+  title: "Gauge Floors"
+  description: "Reproducible experiments and tutorials for quantized matrix products."
+  site-url: https://piyush314.github.io/gauge-floors/
+  repo-url: https://github.com/piyush314/gauge-floors
+  repo-actions: [issue]
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: getting-started.md
+        text: Start
+      - href: concepts.qmd
+        text: Concepts
+      - href: tutorials/index.qmd
+        text: Tutorials
+      - href: reproduction.md
+        text: Reproduce
+      - href: figures.qmd
+        text: Results
+      - href: accessibility.md
+        text: Accessibility
+    right:
+      - icon: github
+        href: https://github.com/piyush314/gauge-floors
+        aria-label: GitHub repository
+  page-footer:
+    left: "Computational artifacts only · manuscript source is maintained privately"
+    right:
+      - href: cite.qmd
+        text: Cite
+      - href: faq.qmd
+        text: FAQ
+
+format:
+  html:
+    theme: [cosmo, assets/theme.scss]
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    anchor-sections: true
+    link-external-newwindow: true
+    lang: en-US
+    include-in-header:
+      text: |
+        <meta name="theme-color" content="#15324a">
+
+execute:
+  enabled: false
+  freeze: true

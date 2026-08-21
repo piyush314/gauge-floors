@@ -1,0 +1,47 @@
+/*-- scss:defaults --*/
+$primary: #175c73;
+$link-color: #0b5870;
+$body-color: #17212b;
+$body-bg: #ffffff;
+$font-size-root: 18px;
+
+/*-- scss:rules --*/
+:focus-visible {
+  outline: 3px solid #b45309;
+  outline-offset: 3px;
+}
+
+.hero {
+  background: #eef6f8;
+  border-left: 0.4rem solid #175c73;
+  border-radius: 0.4rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+}
+
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.route-card {
+  border: 1px solid #9aa9b3;
+  border-radius: 0.4rem;
+  padding: 1rem 1.2rem;
+}
+
+code {
+  color: #7c2d12;
+}
+
+img {
+  max-height: 42rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,36 @@
+# Local environments and Python caches
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Notebook and Quarto products
+.ipynb_checkpoints/
+.quarto/
+docs/_freeze/
+docs/_site/
+
+# Local build products
+.build/
+dist/
+.DS_Store
+
+# Manuscript, submission, and office-document formats never belong here
+*.tex
+*.bib
+*.cls
+*.sty
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.tar
+*.tar.gz
+*.tgz
+*.zip
