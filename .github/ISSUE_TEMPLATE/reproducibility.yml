@@ -1,0 +1,47 @@
+name: Reproducibility report
+description: Report a setup, test, build, artifact, or numerical-reproduction problem.
+title: "[reproducibility] "
+labels: [reproducibility]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Do not include credentials, private data, or embargoed manuscript text.
+        Security-sensitive reports belong in the private channel described in
+        SECURITY.md.
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: Full commit SHA or release tag used.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, Python/TeX versions, and install command.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and output
+      description: Exact command, expected result, and the relevant error or mismatch.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Working-tree status
+      description: Paste `git status --short` after removing unrelated private paths.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I used the pinned Python version and `experiments/requirements-lock.txt`.
+        - label: I confirmed this report contains no secret or private data.
+          required: true

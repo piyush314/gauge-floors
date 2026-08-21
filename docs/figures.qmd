@@ -1,0 +1,30 @@
+---
+title: "Generated results"
+description: "Accessible chart gallery with source-data links."
+---
+
+Every chart is generated from committed CSV/JSON evidence. Visual encodings use
+shape, line style, hatching, or fill state in addition to color.
+
+## Nuclear-floor outputs
+
+![Grouped objective-ratio comparisons and flattening boxplots. Full-gauge results stay at ratio one; balanced inner-only methods reduce, but do not eliminate, the remaining range gap.](https://raw.githubusercontent.com/piyush314/gauge-floors/main/figures/nuclear/objective_ratios.svg)
+
+[Long description and data links](figure-descriptions.md#objective-ratios)
+
+![Objective-to-floor ratio across inner dimensions from 16 to 1024. The full-gauge series stays at one while inner-only series rise gradually.](https://raw.githubusercontent.com/piyush314/gauge-floors/main/figures/nuclear/dimension_scaling.svg)
+
+[Long description and data links](figure-descriptions.md#dimension-scaling)
+
+## Product-aware rounding outputs
+
+![Dynamic rounding error versus dimension-to-rank ratio. Conditional-expectation and reached-face methods improve as the ratio grows.](https://raw.githubusercontent.com/piyush314/gauge-floors/main/figures/discrepancy/dynamic_scaling.svg)
+
+[Long description and data links](figure-descriptions.md#dynamic-scaling)
+
+![Calibration error versus held-out error on three- and four-bit Digits experiments. Shape identifies method and fill identifies calibration-pool size.](https://raw.githubusercontent.com/piyush314/gauge-floors/main/figures/discrepancy/static_transfer.svg)
+
+[Long description and data links](figure-descriptions.md#static-transfer)
+
+See the [complete description index](figure-descriptions.md) for all eight
+charts and their machine-readable alternatives.

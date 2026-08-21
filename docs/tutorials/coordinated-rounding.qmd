@@ -1,0 +1,46 @@
+---
+title: "Tutorial 2: coordinate four rounding decisions"
+description: "A rank-one example cancels error that independent rounding leaves positive."
+---
+
+## Problem
+
+Four values lie halfway between adjacent grid points. Independent Bernoulli
+rounding has positive expected product error. Because all four sensitivities
+point in the same direction, two up and two down decisions can cancel exactly.
+
+```python
+import numpy as np
+
+from experiments.discrepancy import (
+    conditional_expectation_finish,
+    enumerate_binary_optimum,
+    null_space_reduce,
+    same_grid_bernoulli_energy,
+)
+
+block = np.ones((4, 1))
+theta = np.full(4, 0.5)
+
+_, exact_error = enumerate_binary_optimum(block, theta)
+relaxed, trace = null_space_reduce(block, theta)
+rounded, _ = conditional_expectation_finish(block, theta, relaxed)
+coordinated_error = float(np.linalg.norm((rounded - theta) @ block) ** 2)
+
+print(same_grid_bernoulli_energy(block, theta))
+print(trace["residual_size"], rounded.astype(int).tolist())
+print(coordinated_error, exact_error)
+
+assert coordinated_error == exact_error == 0.0
+```
+
+The independent reference is `1.0`; the coordinated error is `0.0`. Any vector
+with two zeros and two ones has the same cancellation.
+
+## Boundary
+
+This example uses a rank-one block and unconstrained midpoint residues. The full
+protocol separately tests higher rank, row-sensitivity imbalance, fixed offsets,
+and a reusable static setting.
+
+[Open the executable notebook](https://github.com/piyush314/gauge-floors/blob/main/notebooks/tutorials/02_coordinated_rounding.ipynb).

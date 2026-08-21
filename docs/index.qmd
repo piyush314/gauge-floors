@@ -1,0 +1,61 @@
+---
+title: "Gauge Floors"
+page-layout: full
+toc: false
+---
+
+::: {.hero}
+# Quantization error depends on the representation and the rounding rule.
+
+This project provides tested experiments for two complementary questions:
+how product-preserving transformations expose an independent-noise floor, and
+how coordinated rounding can use low-rank cancellation after the grid is fixed.
+
+[Run the first tutorial](tutorials/nuclear-floor.qmd){.btn .btn-primary}
+[Verify the artifacts](reproduction.md){.btn .btn-outline-secondary}
+:::
+
+## Choose a route
+
+::: {.route-grid}
+::: {.route-card}
+### Learn
+
+Start with the [concept map](concepts.qmd), then follow two small worked
+examples without running the full experiment suite.
+:::
+
+::: {.route-card}
+### Experiment
+
+Open the [executable notebooks](https://github.com/piyush314/gauge-floors/tree/main/notebooks)
+or run the examples as ordinary Python scripts.
+:::
+
+::: {.route-card}
+### Audit
+
+Inspect the [data dictionary](data-dictionary.md), source CSV/JSON files, and
+SHA-256 manifests before trusting a chart.
+:::
+:::
+
+::: {.callout-important}
+## Deliberate repository boundary
+
+This public repository contains computational evidence and educational
+materials only. It has no manuscript LaTeX, bibliography, journal class,
+submission archive, paper PDF, review record, or manuscript Git history.
+:::
+
+## What can be reproduced?
+
+- seeded factor-balancing and flattening experiments;
+- singular regularization and dimension scaling;
+- dynamic low-rank rounding, sensitivity imbalance, and clipping experiments;
+- static three- and four-bit transfer on scikit-learn's bundled Digits data;
+- accessible SVG charts and their exact CSV/JSON inputs;
+- complete environment and artifact SHA-256 manifests.
+
+The assumptions and boundaries are stated beside each tutorial and in the
+[experiment protocols](https://github.com/piyush314/gauge-floors/tree/main/experiments).

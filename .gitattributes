@@ -1,0 +1,5 @@
+* text=auto eol=lf
+
+experiments/results/* linguist-generated=true
+figures/**/*.svg linguist-generated=true
+*.svg whitespace=-blank-at-eol

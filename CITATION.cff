@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+message: >-
+  Cite the study associated with the result or artifact you use. The references
+  below identify the companion research outputs.
+title: Gauge Floors Reproducibility and Tutorials
+type: software
+date-released: 2026-08-20
+repository-code: https://github.com/piyush314/gauge-floors
+abstract: >-
+  Numerical experiments, executable tutorials, notebooks, generated figures,
+  and provenance records for studies of independent-noise gauge floors and
+  product-aware deterministic matrix rounding. Manuscript source is maintained
+  separately and is not part of this repository.
+keywords:
+  - matrix quantization
+  - matrix products
+  - discrepancy theory
+  - nuclear norm
+  - reproducible research
+authors:
+  - family-names: Sao
+    given-names: Piyush
+    orcid: https://orcid.org/0000-0002-9432-5855
+  - family-names: Miniskar
+    given-names: Narasinga
+    orcid: https://orcid.org/0000-0001-8259-8891
+  - family-names: Valero-Lara
+    given-names: Pedro
+    orcid: https://orcid.org/0000-0002-1479-4310
+  - family-names: Teranishi
+    given-names: Keita
+    orcid: https://orcid.org/0000-0001-6647-2690
+  - family-names: Seal
+    given-names: Sudip
+    orcid: https://orcid.org/0000-0003-3233-0656
+references:
+  - type: article
+    title: A Nuclear-Norm Lower Bound for Dithered Scalar Quantization of Matrix Products
+    year: 2026
+    url: https://hal.science/hal-05711980
+    authors:
+      - family-names: Sao
+        given-names: Piyush
+      - family-names: Miniskar
+        given-names: Narasinga
+      - family-names: Valero-Lara
+        given-names: Pedro
+      - family-names: Teranishi
+        given-names: Keita
+      - family-names: Seal
+        given-names: Sudip
+  - type: article
+    title: Metric Discrepancy for Product-Aware Deterministic Matrix Rounding
+    year: 2026
+    authors:
+      - family-names: Sao
+        given-names: Piyush
+      - family-names: Miniskar
+        given-names: Narasinga
+      - family-names: Valero-Lara
+        given-names: Pedro
+      - family-names: Teranishi
+        given-names: Keita
+      - family-names: Seal
+        given-names: Sudip

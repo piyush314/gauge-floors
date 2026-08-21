@@ -1,0 +1,31 @@
+---
+title: "FAQ"
+---
+
+## Is the manuscript source in this repository?
+
+No. This repository was created from a strict allowlist with new Git history.
+It contains only computational evidence, tutorials, notebooks, and the Pages
+site. Manuscript and submission materials are maintained privately.
+
+## Does public mean open source?
+
+Not yet. No approved reuse license has been granted. The repository is public
+for inspection and reproducibility, but all rights remain reserved until the
+copyright holders add an approved license.
+
+## Why did my hashes change after reproduction?
+
+First compare platform and runtime fields. Scientific arrays are seeded and
+validated; timing fields and platform metadata record the current run. Keep all
+files from one run together before interpreting a manifest difference.
+
+## Are these production rounding routines?
+
+No. They are research implementations designed to expose assumptions,
+certificates, and numerical identities.
+
+## Do the experiments download data?
+
+No. They use synthetic inputs plus the Digits dataset bundled with
+scikit-learn.
